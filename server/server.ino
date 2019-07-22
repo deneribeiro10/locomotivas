@@ -47,7 +47,7 @@ void setup() {
 
 void loop() {
 
-  digitalWrite(PIN_LED, !connected);
+  digitalWrite(PIN_LED, connected);
   
   buttons();
 
