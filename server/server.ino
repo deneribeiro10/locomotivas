@@ -4,7 +4,7 @@
 const char *user = "controle1";
 const char *pass = "1234567890"; 
 
-#define PIN_LED D0
+#define PIN_LED D4
 #define PIN_LIGHT D1
 #define PIN_AUTOMATIC D2
 #define PIN_SPEED A0
