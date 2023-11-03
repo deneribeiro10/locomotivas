@@ -115,7 +115,7 @@ void updateLight() {
     }
   }
 
-  last_btn_automatic_read = r;
+  last_btn_light_read = r;
 }
 
 void updateAutomatic() {
