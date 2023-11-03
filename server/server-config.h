@@ -1,5 +1,5 @@
-#ifndef __CONFIG_H__
-#define __CONFIG_H__
+#ifndef __SERVER_CONFIG_H__
+#define __SERVER_CONFIG_H__
 
 // Tempo de Atualização da velocidade (em milissegundos), isso evita que flutuações no valor
 // valor da leitura do potenciômetro sejam enviadas repetidamente para os trens.

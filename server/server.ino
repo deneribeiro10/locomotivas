@@ -1,6 +1,6 @@
 #include <ESP8266WiFi.h>
 #include <WebSocketsServer.h>
-#include "config.h"
+#include "server-config.h"
 
 const char *user = "controle1";
 const char *pass = "1234567890"; 
