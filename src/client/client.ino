@@ -19,7 +19,7 @@ void evt(WStype_t, uint8_t *, size_t);
 void setDefaultValues();
 void writeValues();
 
-bool systemUpdates = false;
+bool systemUpdates = true;
 
 void setup() {
   WiFi.mode(WIFI_STA);
@@ -39,7 +39,6 @@ void setup() {
 }
 
 void loop() {
-
   writeValues();
 
   client.loop();
@@ -76,20 +75,18 @@ void evt(WStype_t type, uint8_t *msg, size_t len) {
 void setDefaultValues() {
   speed = 192;
   light = 1;
-  systemUpdates = true;
 }
 
 void writeValues() {
-
   if(!systemUpdates) return;
 
   if(autom) setDefaultValues();
 
   if(speed >= 128) {
     analogWrite(PIN_MT0, 0);
-    analogWrite(PIN_MT1, (speed-128) << 3);
+    analogWrite(PIN_MT1, speed-128);
   } else {
-    analogWrite(PIN_MT0, (128-speed) << 3);
+    analogWrite(PIN_MT0, 128-speed);
     analogWrite(PIN_MT1, 0);
   }
 
